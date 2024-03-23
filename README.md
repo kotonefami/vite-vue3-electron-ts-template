@@ -1,13 +1,13 @@
 # Vite+Vue3+Electron+Typescript template
 
-![screenshot](./src/assets/screenshot.png)
+![screenshot](./src/frontend/assets/screenshot.png)
 
 ## Get Started
 
 ### 1. clone this repository
 
 ```bash
-git clone https://github.com/Yukun-Guo/vite-vue3-electron-ts-template.git
+git clone https://github.com/kotonefami/vite-vue3-electron-ts-template.git
 ```
 
 ### 2. install packages
