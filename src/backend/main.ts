@@ -21,7 +21,7 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: join(__dirname, '../preload/preload.js'),
+            preload: join(__dirname, 'preload/preload.js'),
         },
     });
 
@@ -30,12 +30,12 @@ function createWindow() {
         mainWindow.loadURL('http://localhost:3000');// Open the DevTools.
         mainWindow.webContents.openDevTools();
     } else {
-        mainWindow.loadFile(join(__dirname, '../../index.html'));
+        mainWindow.loadFile(join(__dirname, '../frontend/index.html'));
     }
     // mainWindow.loadURL( //this doesn't work on macOS in build and preview mode
     //     isDev ?
     //     'http://localhost:3000' :
-    //     join(__dirname, '../../index.html')
+    //     join(__dirname, '../frontend/index.html')
     // );
 }
 

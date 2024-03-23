@@ -12,9 +12,9 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
-    "outDir": "dist/electron"
+    "outDir": "dist/backend"
   },
-  "include": ["src/electron/**/*"],
+  "include": ["src/backend/**/*"],
   "references": [{
     "path": "./tsconfig.node.json"
   }]
