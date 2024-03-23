@@ -49,6 +49,7 @@
     }
   },
   "devDependencies": {
+    "@types/node": "^20.11.30",
     "@vitejs/plugin-vue": "^2.3.4",
     "concurrently": "^7.6.0",
     "electron": "^25.9.8",
