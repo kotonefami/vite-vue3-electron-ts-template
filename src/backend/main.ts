@@ -1,10 +1,5 @@
-import { join } from 'path';
-import {
-    app,
-    BrowserWindow,
-    ipcMain,
-    dialog
-} from 'electron';
+import { join } from "path";
+import { app, BrowserWindow, ipcMain, dialog } from "electron";
 
 const isDev = process.env.npm_lifecycle_event === "app:dev" ? true : false;
 
@@ -20,27 +15,27 @@ function createWindow() {
         width: 800,
         height: 600,
         webPreferences: {
-            preload: join(__dirname, 'preload/preload.js'),
+            preload: join(__dirname, "preload/preload.js"),
         },
     });
 
     if (isDev) {
-        mainWindow.loadURL('http://localhost:3000');
+        mainWindow.loadURL("http://localhost:3000");
     } else {
-        mainWindow.loadFile(join(__dirname, '../frontend/index.html'));
+        mainWindow.loadFile(join(__dirname, "../frontend/index.html"));
     }
 }
 
 app.whenReady().then(() => {
-    ipcMain.handle('dialog:openFile', handleFileOpen)
+    ipcMain.handle("dialog:openFile", handleFileOpen)
     createWindow()
-    app.on('activate', function () {
+    app.on("activate", function () {
         if (BrowserWindow.getAllWindows().length === 0) createWindow()
     })
 });
 
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
+app.on("window-all-closed", () => {
+    if (process.platform !== "darwin") {
         app.quit();
     }
 });
